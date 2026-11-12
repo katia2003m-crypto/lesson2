@@ -5,6 +5,7 @@ string_utils = StringUtils()
 
 # 1. Тесты для функции capitalize (2 теста)
 
+
 @pytest.mark.positive
 @pytest.mark.parametrize("string, expected", [
     ("skypro", "Skypro"),
@@ -12,6 +13,7 @@ string_utils = StringUtils()
 ])
 def test_capitalize_positive(string, expected):
     assert string_utils.capitalize(string) == expected
+
 
 @pytest.mark.negative
 @pytest.mark.parametrize("string, expected", [
@@ -23,6 +25,7 @@ def test_capitalize_negative(string, expected):
 
 # 2. Тесты для функции trim (2 теста)
 
+
 @pytest.mark.positive
 @pytest.mark.parametrize("string, expected", [
     (" skypro", "skypro"),
@@ -30,6 +33,7 @@ def test_capitalize_negative(string, expected):
 ])
 def test_trim_positive(string, expected):
     assert string_utils.trim(string) == expected
+
 
 @pytest.mark.negative
 @pytest.mark.parametrize("string, expected", [
@@ -39,7 +43,8 @@ def test_trim_positive(string, expected):
 def test_trim_negative(string, expected):
     assert string_utils.trim(string) == expected
 
-# 3. Тесты для функции contains (2 теста)  
+# 3. Тесты для функции contains (2 теста)
+
 
 @pytest.mark.positive
 @pytest.mark.parametrize("string, symbol, expected", [
@@ -48,6 +53,7 @@ def test_trim_negative(string, expected):
 ])
 def test_contains_positive(string, symbol, expected):
     assert string_utils.contains(string, symbol) is expected
+
 
 @pytest.mark.negative
 @pytest.mark.parametrize("string, symbol, expected", [
@@ -59,6 +65,7 @@ def test_contains_negative(string, symbol, expected):
 
 # 4. Тесты для функции delete_symbol (2 теста)
 
+
 @pytest.mark.positive
 @pytest.mark.parametrize("string, symbol, expected", [
     ("SkyPro", "k", "SyPro"),
@@ -66,6 +73,7 @@ def test_contains_negative(string, symbol, expected):
 ])
 def test_delete_symbol_positive(string, symbol, expected):
     assert string_utils.delete_symbol(string, symbol) == expected
+
 
 @pytest.mark.negative
 @pytest.mark.parametrize("string, symbol, expected", [
